@@ -23,7 +23,6 @@ function requestData(num) {
 
 function displayResults(responseJson){
   $('.results').removeClass('hidden');
-  console.log(responseJson.message)
  const picArray = []
   for (let i = 0; i<responseJson.message.length; i++){
    picArray.push(`<img src = "${responseJson.message[i]}" class ='results-img'>`)
