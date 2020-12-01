@@ -1,3 +1,4 @@
+// https://adammayerao.github.io/Doggies/
 'use strict';
 
 function handleForm() {
@@ -23,7 +24,8 @@ function requestData(num) {
 
 function displayResults(responseJson){
   $('.results').removeClass('hidden');
- const picArray = []
+  $('.results').append("<h3>Here's the dog images</h3>")
+  const picArray = []
   for (let i = 0; i<responseJson.message.length; i++){
    picArray.push(`<img src = "${responseJson.message[i]}" class ='results-img'>`)
   }
@@ -35,6 +37,7 @@ function displayResults(responseJson){
 
 $(function() {
     console.log('Ready to go! Click for a doggie surprise');
+    
     handleForm();
     
 });
